@@ -6,5 +6,6 @@ source venv/bin/activate # On Unix or MacOS
 
 pip3 install django
 
+cd app
 python3 manage.py runserver
 ```
