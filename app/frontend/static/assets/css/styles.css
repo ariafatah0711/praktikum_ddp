@@ -1,0 +1,95 @@
+:root {
+    --brand: #0d6efd;
+    --muted: #6c757d;
+    --bg: #f8f9fa;
+    --surface: #ffffff;
+}
+
+html,
+body {
+    height: 100%;
+    scrollbar-gutter: stable;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: var(--bg);
+    color: #242424;
+    -webkit-font-smoothing: antialiased;
+    overflow-y: auto;
+    margin: 0;
+}
+
+/*  */
+a {
+    text-decoration: none;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--brand) !important
+}
+
+.carousel-item img {
+    height: 420px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-img {
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card {
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(20, 20, 20, 0.06);
+}
+
+.container-fluid {
+    padding: 24px
+}
+
+.list-group-item.active {
+    background: var(--brand);
+    border-color: var(--brand);
+}
+
+/* header/footer tweaks */
+footer {
+    background: var(--surface);
+    padding: 28px 0;
+    margin-top: 28px
+}
+
+.card-title {
+    font-weight: 600
+}
+
+.socials {
+    margin-top: 18px
+}
+
+/* responsive adjustments */
+@media (min-width: 992px) {
+    .carousel-item img {
+        height: 520px
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 260px
+    }
+
+    .card-img {
+        height: 200px
+    }
+}
+
+/* small utilities */
+.muted {
+    color: var(--muted)
+}

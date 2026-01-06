@@ -1,0 +1,40 @@
+{% load static %}
+<div class="py-4">
+  <div class="p-5 bg-light rounded-3">
+    <div class="container-fluid py-3">
+      <h1 class="display-5">Welcome to MyApp</h1>
+      <p class="lead text-muted">Prototype website for DDP P14 — clean, simple, and responsive.</p>
+      <a href="{% url 'frontend:about' %}" class="btn btn-primary btn-lg">Learn more</a>
+    </div>
+  </div>
+
+  <div class="row mt-4 g-3">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Feature One</h5>
+          <p class="card-text text-muted">Short description of feature one.</p>
+          <a href="#" class="stretched-link text-decoration-none">Explore</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Feature Two</h5>
+          <p class="card-text text-muted">Short description of feature two.</p>
+          <a href="#" class="stretched-link text-decoration-none">Explore</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Contact</h5>
+          <p class="card-text text-muted">Get in touch or follow me on GitHub.</p>
+          <a href="{% url 'frontend:contact' %}" class="stretched-link text-decoration-none">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
