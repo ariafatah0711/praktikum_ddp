@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-4">
+  <h2 class="mb-3">Gallery — Dokumentasi</h2>
+
+  <div class="row g-3">
+    {% comment %} Using existing static images from assets/images {% endcomment %}
+    {% for img in images %}
+    <div class="col-6 col-md-4">
+      <div class="card bg-light">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-{{ forloop.counter }}">
+          <img src="{% static 'assets/images/'|add:img %}" class="card-img-top" alt="Image {{ forloop.counter }}" style="height:180px;object-fit:cover;">
+        </a>
+        <div class="card-body p-2 text-center small text-muted">Gambar {{ forloop.counter }}</div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-{{ forloop.counter }}" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <img src="{% static 'assets/images/'|add:img %}" class="w-100" alt="Image {{ forloop.counter }}">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <p class="text-muted small mt-3">Tip: tambahkan file dokumentasi Anda ke `assets/images/` lalu sesuaikan nama di template.</p>
+</div>
+
+{% endblock %}

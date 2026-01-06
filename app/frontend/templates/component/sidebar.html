@@ -22,6 +22,12 @@
 			About
 		</a>
 
+		<a href="{% url 'frontend:gallery' %}"
+		class="list-group-item list-group-item-action
+		{% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">
+			Gallery
+		</a>
+
 		<a href="{% url 'frontend:contact' %}"
 		class="list-group-item list-group-item-action
 		{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">

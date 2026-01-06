@@ -13,6 +13,9 @@
           <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" aria-current="page" href="{% url 'frontend:about' %}">About</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link {% if request.resolver_match.url_name == 'gallery' %}active{% endif %}" aria-current="page" href="{% url 'frontend:gallery' %}">Gallery</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}" aria-current="page" href="{% url 'frontend:contact' %}">Contact</a>
         </li>
       </ul>
